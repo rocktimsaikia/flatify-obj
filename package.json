@@ -1,0 +1,36 @@
+{
+	"name": "flatify-obj",
+	"version": "0.0.0",
+	"description": "Flatten javascript objects into a single-depth object.",
+	"keywords": [
+		"Flatten",
+		"object",
+		"flat",
+		"flatten-object",
+		"flat-object"
+	],
+	"repository": "RocktimSaikia/flatify-obj",
+	"license": "MIT",
+	"author": {
+		"name": "Rocktim Saikia",
+		"email": "rocktimthedev@gmail.com",
+		"url": "https://rocktim.xyz"
+	},
+	"files": [
+		"index.d.ts",
+		"index.js"
+	],
+	"scripts": {
+		"test": "xo && ava"
+	},
+	"dependencies": {
+		"clean-deep": "^3.4.0"
+	},
+	"devDependencies": {
+		"ava": "^3.13.0",
+		"xo": "^0.33.1"
+	},
+	"engines": {
+		"node": ">=12"
+	}
+}
