@@ -59,9 +59,9 @@ interface Options {
  * Flatten javascript objects into a single-depth object.
   @example
  ```js
-    const flatObjects = require('flatify-obj');
+    const flattenObject = require('flatify-obj');
 
-    flatObject({foo: {unicorn: '🦄'}, bar: 'unicorn'});
+    flattenObject({foo: {unicorn: '🦄'}, bar: 'unicorn'});
     //=> {'foo.unicorn': '🦄', bar: 'unicorn'};
 
     flattenObject({foo: {unicorn: '🦄'}, bar: 'unicorn'}, {onlyLeaves: true});
