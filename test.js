@@ -24,6 +24,13 @@ test('main test without any option', t => {
 	t.deepEqual(flattended, expected);
 });
 
+test('test nested objects', t => {
+	const flattended = flatObjects({foo: {bar: {unicorn: '🦄'}}});
+	const expected = {'foo.bar.unicorn': '🦄'};
+
+	t.deepEqual(flattended, expected);
+});
+
 test('with option - onlyLeaves set to true', t => {
 	const flattended = flatObjects({foo: {unicorn: '🦄'}, bar: 'unicorn'}, {onlyLeaves: true});
 	const expected = {unicorn: '🦄', bar: 'unicorn'};

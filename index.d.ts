@@ -56,13 +56,13 @@ interface Options {
 }
 
 /**
- * Flatten javascript objects into a single-depth object.
+ * Flatten nested javascript objects into a single-depth object.
   @example
  ```js
     const flattenObject = require('flatify-obj');
 
-    flattenObject({foo: {unicorn: '🦄'}, bar: 'unicorn'});
-    //=> {'foo.unicorn': '🦄', bar: 'unicorn'};
+    flattenObject({foo: {bar: {unicorn: '🦄'}}})
+    //=> { 'foo.bar.unicorn': '🦄' }
 
     flattenObject({foo: {unicorn: '🦄'}, bar: 'unicorn'}, {onlyLeaves: true});
     //=> {unicorn: '🦄', bar: 'unicorn'}

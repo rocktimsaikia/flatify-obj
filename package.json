@@ -1,7 +1,7 @@
 {
 	"name": "flatify-obj",
 	"version": "1.0.1",
-	"description": "Flatten javascript objects into a single-depth object.",
+	"description": "Flatten nested javascript objects into a single-depth object.",
 	"keywords": [
 		"Flatten",
 		"flat",
