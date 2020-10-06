@@ -1,4 +1,5 @@
 'use strict';
+const isPlainObject = require('is-plain-obj');
 const cleanDeep = require('clean-deep');
 
 const flatifyObject = (object, options) => {
@@ -36,7 +37,7 @@ const flatifyObject = (object, options) => {
 };
 
 module.exports = (input, options) => {
-	if (typeof input !== 'object' || input === null) {
+	if (!isPlainObject(input)) {
 		throw new TypeError(`Expected a type object, got ${input === null ? input : typeof input}`);
 	}
 

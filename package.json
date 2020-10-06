@@ -25,7 +25,8 @@
 		"test": "xo && ava"
 	},
 	"dependencies": {
-		"clean-deep": "^3.4.0"
+		"clean-deep": "^3.4.0",
+		"is-plain-obj": "^2.1.0"
 	},
 	"devDependencies": {
 		"ava": "^3.13.0",

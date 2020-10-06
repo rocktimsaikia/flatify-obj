@@ -68,5 +68,5 @@ interface Options {
     //=> {unicorn: '🦄', bar: 'unicorn'}
  ```
  */
-declare function _exports(input: Record<string, unknown>, options: Options): Record<string, unknown>;
+declare function _exports(input: Record<string | number | symbol, unknown>, options: Options): Record<| number | symbol, unknown>;
 export = _exports;
