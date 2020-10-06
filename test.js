@@ -1,16 +1,16 @@
-const test = require('ava');
-const flatObjects = require('.');
+import test from 'ava';
+import flatifyObject from '.';
 
 test('throw error on non object types', t => {
 	t.throws(() => {
-		flatObjects(null);
+		flatifyObject(null);
 	}, {
 		instanceOf: TypeError,
 		message: 'Expected a type object, got null'
 	});
 
 	t.throws(() => {
-		flatObjects('unicorn');
+		flatifyObject('unicorn');
 	}, {
 		instanceOf: TypeError,
 		message: 'Expected a type object, got string'
@@ -18,28 +18,28 @@ test('throw error on non object types', t => {
 });
 
 test('main test without any option', t => {
-	const flattended = flatObjects({foo: {unicorn: '🦄'}, bar: 'unicorn'});
+	const flattended = flatifyObject({foo: {unicorn: '🦄'}, bar: 'unicorn'});
 	const expected = {'foo.unicorn': '🦄', bar: 'unicorn'};
 
 	t.deepEqual(flattended, expected);
 });
 
 test('test nested objects', t => {
-	const flattended = flatObjects({foo: {bar: {unicorn: '🦄'}}});
+	const flattended = flatifyObject({foo: {bar: {unicorn: '🦄'}}});
 	const expected = {'foo.bar.unicorn': '🦄'};
 
 	t.deepEqual(flattended, expected);
 });
 
 test('with option - onlyLeaves set to true', t => {
-	const flattended = flatObjects({foo: {unicorn: '🦄'}, bar: 'unicorn'}, {onlyLeaves: true});
+	const flattended = flatifyObject({foo: {unicorn: '🦄'}, bar: 'unicorn'}, {onlyLeaves: true});
 	const expected = {unicorn: '🦄', bar: 'unicorn'};
 
 	t.deepEqual(flattended, expected);
 });
 
 test('tests for options of clean-deep module', t => {
-	const flattended = flatObjects({foo: {unicorn: '🦄'}, bar: 'unicorn', test: 'test'}, {onlyLeaves: true, cleanKeys: ['test']});
+	const flattended = flatifyObject({foo: {unicorn: '🦄'}, bar: 'unicorn', test: 'test'}, {onlyLeaves: true, cleanKeys: ['test']});
 	const expected = {unicorn: '🦄', bar: 'unicorn'};
 
 	t.deepEqual(flattended, expected);
