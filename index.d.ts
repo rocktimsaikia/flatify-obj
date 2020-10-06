@@ -60,12 +60,12 @@ declare namespace flatifyObject {
  * Flatten nested javascript objects into a single-depth object.
   @example
  ```js
-    const flattenObject = require('flatify-obj');
+    const flatifyObject = require('flatify-obj');
 
-    flattenObject({foo: {bar: {unicorn: '🦄'}}})
+    flatifyObject({foo: {bar: {unicorn: '🦄'}}})
     //=> { 'foo.bar.unicorn': '🦄' }
 
-    flattenObject({foo: {unicorn: '🦄'}, bar: 'unicorn'}, {onlyLeaves: true});
+    flatifyObject({foo: {unicorn: '🦄'}, bar: 'unicorn'}, {onlyLeaves: true});
     //=> {unicorn: '🦄', bar: 'unicorn'}
  ```
  */

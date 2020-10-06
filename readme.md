@@ -10,15 +10,15 @@ npm install flatify-obj
 ## Usage
 
  ```js
-    const flattenObject = require('flatify-obj');
+    const flatifyObject = require('flatify-obj');
 
-    flattenObject({foo: {bar: {unicorn: '🦄'}}})
+    flatifyObject({foo: {bar: {unicorn: '🦄'}}})
     //=> { 'foo.bar.unicorn': '🦄' }
 
-    flattenObject({foo: {unicorn: '🦄'}, bar: 'unicorn'}, {onlyLeaves: true});
+    flatifyObject({foo: {unicorn: '🦄'}, bar: 'unicorn'}, {onlyLeaves: true});
     //=> {unicorn: '🦄', bar: 'unicorn'}
 
-    flattenObject({foo: {unicorn: '🦄'}, bar: 'unicorn'}, {onlyLeaves: true, cleanKeys: ['bar']});
+    flatifyObject({foo: {unicorn: '🦄'}, bar: 'unicorn'}, {onlyLeaves: true, cleanKeys: ['bar']});
     //=> {unicorn: '🦄'}
  ```
 
@@ -26,7 +26,7 @@ npm install flatify-obj
 
 ## API
 
-### flattenObject(object, options?)
+### flatifyObject(object, options?)
 
 #### object
 
