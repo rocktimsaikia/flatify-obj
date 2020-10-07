@@ -1,6 +1,5 @@
 'use strict';
 const isPlainObject = require('is-plain-obj');
-const cleanDeep = require('clean-deep');
 
 const flatifyObject = (object, options) => {
 	options = {
@@ -33,7 +32,7 @@ const flatifyObject = (object, options) => {
 		}
 	}
 
-	return cleanDeep(flattened, {...options});
+	return flattened;
 };
 
 module.exports = (input, options) => {

@@ -17,12 +17,7 @@ npm install flatify-obj
 
     flatifyObject({foo: {unicorn: '🦄'}, bar: 'unicorn'}, {onlyLeaves: true});
     //=> {unicorn: '🦄', bar: 'unicorn'}
-
-    flatifyObject({foo: {unicorn: '🦄'}, bar: 'unicorn'}, {onlyLeaves: true, cleanKeys: ['bar']});
-    //=> {unicorn: '🦄'}
  ```
-
-> For removal of falsy, empty or nullable values from object , It uses [clean-deep](https://github.com/nunofgs/clean-deep). Refer to their readme to check all the availabe options.
 
 ## API
 
@@ -41,7 +36,7 @@ Object to flatten
 Type: `boolean`<br>
 Default: `false`
 
-Only returns the leaf nodes of the object
+Removes the parent property and only returns the leaf nodes of the object
 
 
 ## Support

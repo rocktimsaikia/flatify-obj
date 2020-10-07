@@ -38,10 +38,3 @@ test('with option - onlyLeaves set to true', t => {
 	t.deepEqual(flattended, expected);
 });
 
-test('tests for options of clean-deep module', t => {
-	const flattended = flatifyObject({foo: {unicorn: '🦄'}, bar: 'unicorn', test: 'test'}, {onlyLeaves: true, cleanKeys: ['test']});
-	const expected = {unicorn: '🦄', bar: 'unicorn'};
-
-	t.deepEqual(flattended, expected);
-});
-
