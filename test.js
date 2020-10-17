@@ -1,5 +1,5 @@
 import test from 'ava';
-import flatifyObject from '.';
+import flatifyObject from './src';
 
 test('throw error on non object types', t => {
 	t.throws(() => {

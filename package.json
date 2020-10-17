@@ -3,7 +3,7 @@
 	"version": "2.0.0",
 	"description": "Flatten nested javascript objects into a single-depth object.",
 	"keywords": [
-		"Flatten",
+		"flatten",
 		"flat",
 		"object",
 		"objects",
@@ -18,8 +18,7 @@
 		"url": "https://rocktim.xyz"
 	},
 	"files": [
-		"index.d.ts",
-		"index.js"
+		"src/**/*"
 	],
 	"scripts": {
 		"test": "xo && ava"
