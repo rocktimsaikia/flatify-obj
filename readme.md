@@ -1,5 +1,4 @@
-# flatify-obj ![build](https://travis-ci.com/RocktimSaikia/flatify-obj.svg?branch=master) ![license](https://img.shields.io/github/license/rocktimsaikia/flatify-obj)
-
+# flatify-obj ![build](https://travis-ci.com/RocktimSaikia/flatify-obj.svg?branch=master) 
 > Flatten nested javascript objects into a single-depth object.
 
 ## Install
@@ -41,4 +40,4 @@ Removes the parent property and only returns the leaf nodes of the object
 
 ## License
 
-MIT ©️ [Rocktim Saikia](https://rocktim.xyz/);
+MIT © [Rocktim Saikia](https://rocktim.xyz/)
